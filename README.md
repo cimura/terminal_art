@@ -23,29 +23,25 @@
 
 
 ### 2. スクリプトの配置
-作成したスクリプトをホームディレクトリのscriptsフォルダーに配置します。必要に応じてディレクトリを作成してください。
+作成したスクリプトをホームディレクトリのscriptsフォルダーに配置します。必要に応じてディレクトリを作成してください。また、そのファイルに実行権限を与えます。
 
 ```bash
 mkdir -p ~/scripts
 mv animation.sh ~/scripts/
+chmod +x ~/srcipts/animation.sh
 ```
-
 
 3. .zshrcの編集
 次に、ターミナルの設定ファイルである.zshrcを編集して、ターミナルが開かれたときにスクリプトが実行されるようにします。
+今回はviで書き込むより手軽なのでechoを使いました。
 
 
 ```bash
-vi ~/.zshrc
-```
-
-以下の内容を.zshrcの最後に追加します。
-
-```bash
-if [ -f ~/scripts/animation.sh ]; then
+echo 'if [ -f ~/scripts/animation.sh ]; then
     ~/scripts/animation.sh
-fi
+fi' >> ~/.zshrc
 ```
+
 
 4. 設定の反映
 .zshrcを編集した後、変更を反映するためにターミナルを再起動するか、以下のコマンドを実行します。
