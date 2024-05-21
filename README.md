@@ -16,6 +16,16 @@
 
 ## 手順
 
+まずは何はともあれgit clone
+```bash
+git clone https://github.com/cimura/terminal_art.git
+```
+そしてそのディレクトリへ移動
+
+```bash
+cd terminal_art
+```
+
 
 ### 1. スクリプトの準備
 まず、ターミナルを開いた際に実行するスクリプトを用意します。例えば、animation.shという名前でスクリプトを作成します。スクリプトの内容は以下のようになります。
@@ -28,7 +38,7 @@
 ```bash
 mkdir -p ~/scripts
 mv animation.sh ~/scripts/
-chmod +x ~/srcipts/animation.sh
+chmod +x ~/scripts/animation.sh
 ```
 
 3. .zshrcの編集
